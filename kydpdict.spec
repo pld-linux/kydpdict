@@ -2,7 +2,7 @@ Summary:	Fronted to Collins Dictionary
 Summary(pl):	Interfejs do s³ownika Collinsa
 Name:		kydpdict
 Version:	0.5.6
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	http://members.elysium.pl/ytm/src/%{name}-%{version}.tar.bz2
@@ -43,6 +43,7 @@ install src/kydpdict $RPM_BUILD_ROOT%{_bindir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Scientific
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 install src/kydpdict_pl.qm $RPM_BUILD_ROOT%{_datadir}/kydpdict
+install src/tips.html $RPM_BUILD_ROOT%{_datadir}/kydpdict
 
 %clean
 rm -rf $RPM_BUILD_ROOT
