@@ -5,10 +5,10 @@ Version:	0.5.0
 Release:	1
 License:	GPL
 Group:		Applications/Dictionaries
-URL:		http://members.elysium.pl/ytm/html/kydpdict.html
 Source0:	http://members.elysium.pl/ytm/src/%{name}-%{version}.tar.bz2
 Source1:	%{name}.desktop
 Source2:	%{name}.png
+URL:		http://members.elysium.pl/ytm/html/kydpdict.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -48,7 +48,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS COPYING README ChangeLog INSTALL TODO
+%doc AUTHORS README ChangeLog TODO
 %attr(755,root,root) %{_bindir}/*
 %{_applnkdir}/Scientific/*
 %{_pixmapsdir}/*
