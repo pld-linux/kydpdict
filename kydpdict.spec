@@ -1,12 +1,12 @@
 Summary:	Frontend to Collins Dictionary
 Summary(pl):	Interfejs do s³ownika Collinsa
 Name:		kydpdict
-Version:	0.6.2
+Version:	0.6.3
 Release:	1
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	http://members.elysium.pl/ytm/src/%{name}-%{version}.tar.bz2
-# Source0-md5:	bb40d8b2b5a8b1de3c59eec1f22e7c5d
+# Source0-md5:	d88660722285a5968d4f5d729a7596dc
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://members.elysium.pl/ytm/html/kydpdict.html
@@ -41,16 +41,13 @@ polsko-angielski, niemiecko-polski i polsko-niemiecki.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir} \
-	$RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir}} \
-	$RPM_BUILD_ROOT%{_datadir}/kydpdict
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
-install src/kydpdict $RPM_BUILD_ROOT%{_bindir}
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
-install src/kydpdict_pl.qm $RPM_BUILD_ROOT%{_datadir}/kydpdict
-install src/tips.html $RPM_BUILD_ROOT%{_datadir}/kydpdict
 
 %clean
 rm -rf $RPM_BUILD_ROOT
