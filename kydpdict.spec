@@ -10,7 +10,9 @@ Source0:	http://members.elysium.pl/ytm/src/%{name}-%{version}.tar.bz2
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-configure_in.patch
-BuildRequires:	qt-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	qt-devel >= 3.0.0
 URL:		http://members.elysium.pl/ytm/html/kydpdict.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
