@@ -6,4 +6,5 @@ Exec=kydpdict
 Terminal=0
 Icon=kydpdict.png
 Type=Application
+Encoding=UTF-8
 # vi: encoding=utf-8
