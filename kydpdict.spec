@@ -31,7 +31,7 @@ polsko-angielski, niemiecko-polski i polsko-niemiecki.
 %prep
 %setup -q
 %patch0 -p0
-%patch1 -p0
+%patch1 -p1
 
 %build
 export QTDIR="%{_prefix}"
