@@ -9,6 +9,7 @@ Source0:	http://members.elysium.pl/ytm/src/%{name}-%{version}.tar.bz2
 # Source0-md5:	8592bf17caa2128fcda38ae32ea2e66d
 Source1:	%{name}.desktop
 Source2:	%{name}.png
+BuildRequires:	qt-devel
 URL:		http://members.elysium.pl/ytm/html/kydpdict.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
