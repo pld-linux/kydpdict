@@ -1,12 +1,12 @@
 Summary:	Frontend to Collins Dictionary
 Summary(pl):	Interfejs do s³ownika Collinsa
 Name:		kydpdict
-Version:	0.6.4
+Version:	0.6.6
 Release:	1
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	http://members.elysium.pl/ytm/src/%{name}-%{version}.tar.bz2
-# Source0-md5:	b9c0e0ffb3c7baa2f89f3fe6b44c8773
+# Source0-md5:	081361ebfb36475e126ec7c481047ab1
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://members.elysium.pl/ytm/html/kydpdict.html
