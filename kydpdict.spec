@@ -9,6 +9,7 @@ Source0:	http://members.elysium.pl/ytm/src/%{name}-%{version}.tar.bz2
 # Source0-md5:	8592bf17caa2128fcda38ae32ea2e66d
 Source1:	%{name}.desktop
 Source2:	%{name}.png
+Patch0:		%{name}-configure_in.patch
 BuildRequires:	qt-devel
 URL:		http://members.elysium.pl/ytm/html/kydpdict.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -25,9 +26,12 @@ polsko-angielski, niemiecko-polski i polsko-niemiecki.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 export QTDIR="%{_prefix}"
+%{__aclocal}
+%{__autoconf}
 %configure \
 	--with-qt-includes=%{_includedir}/qt
 
