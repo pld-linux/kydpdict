@@ -2,7 +2,7 @@ Summary:	Fronted to Collins Dictionary
 Summary(pl):	Interfejs do s³ownika Collinsa
 Name:		kydpdict
 Version:	0.5.6
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	http://members.elysium.pl/ytm/src/%{name}-%{version}.tar.bz2
@@ -11,10 +11,11 @@ Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-configure_in.patch
 URL:		http://members.elysium.pl/ytm/html/kydpdict.html
-BuildRequires:	autoconf
-BuildRequires:	automake
+BuildRequires:	autoconf >= 2.57
 BuildRequires:	qt-devel >= 3.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define	_prefix	/usr/X11R6
 
 %description
 Kydpdict is a Qt frontend for Collins dictionaries released by Young
@@ -36,7 +37,6 @@ export QTDIR="%{_prefix}"
 %{__autoconf}
 %configure \
 	--with-qt-includes=%{_includedir}/qt
-
 %{__make}
 
 %install
@@ -45,12 +45,15 @@ install -d $RPM_BUILD_ROOT%{_bindir} \
 	$RPM_BUILD_ROOT{%{_pixmapsdir},%{_applnkdir}/Scientific} \
 	$RPM_BUILD_ROOT%{_datadir}/kydpdict
 
-install src/kydpdict $RPM_BUILD_ROOT%{_bindir}
-
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Scientific
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
-install src/kydpdict_pl.qm $RPM_BUILD_ROOT%{_datadir}/kydpdict
-install src/tips.html $RPM_BUILD_ROOT%{_datadir}/kydpdict
+
+%{__make} install	\
+	prefix=$RPM_BUILD_ROOT%{_prefix}	\
+	exec_prefix=$RPM_BUILD_ROOT%{_exec_prefix}	\
+	bindir=$RPM_BUILD_ROOT%{_bindir}	\
+	datadir=$RPM_BUILD_ROOT%{_datadir}
+rm -fr $RPM_BUILD_ROOT%{_datadir}/doc
 
 %clean
 rm -rf $RPM_BUILD_ROOT
