@@ -2,7 +2,7 @@ Summary:	Fronted to Collins Dictionary
 Summary(pl):	Interfejs do s³ownika Collinsa
 Name:		kydpdict
 Version:	0.5.6
-Release:	2
+Release:	4
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	http://members.elysium.pl/ytm/src/%{name}-%{version}.tar.bz2
