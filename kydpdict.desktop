@@ -7,4 +7,5 @@ Terminal=false
 Icon=kydpdict.png
 Type=Application
 Encoding=UTF-8
+Categories=Office;Dictionary;
 # vi: encoding=utf-8
