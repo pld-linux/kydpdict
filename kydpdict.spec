@@ -1,20 +1,18 @@
-Summary:	Fronted to Collins Dictionary
+Summary:	Frontend to Collins Dictionary
 Summary(pl):	Interfejs do s³ownika Collinsa
 Name:		kydpdict
-Version:	0.5.6
-Release:	5
+Version:	0.5.7
+Release:	1
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	http://members.elysium.pl/ytm/src/%{name}-%{version}.tar.bz2
-# Source0-md5:	8592bf17caa2128fcda38ae32ea2e66d
+# Source0-md5:	1771a66965b541db686ee1944a8609bf
 Source1:	%{name}.desktop
 Source2:	%{name}.png
-Patch0:		%{name}-configure_in.patch
-Patch1:		%{name}-info_about_commercial_component.patch
 URL:		http://members.elysium.pl/ytm/html/kydpdict.html
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	qt-devel >= 3.0.0
+BuildRequires:	qt-devel >= 3.1.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -29,15 +27,13 @@ polsko-angielski, niemiecko-polski i polsko-niemiecki.
 
 %prep
 %setup -q
-%patch0 -p0
-%patch1 -p1
 
 %build
-export QTDIR="%{_prefix}"
-%{__aclocal}
+%{__aclocal} --acdir=config
 %{__autoconf}
 %configure \
-	--with-qt-includes=%{_includedir}/qt
+	--with-qt-includes=%{_includedir}/qt \
+	--with-qt-libraries=%{_libdir}
 
 %{__make}
 
