@@ -139,4 +139,48 @@ diff -urN kydpdict-0.5.6.orig/src/ydpconfigure.cpp kydpdict-0.5.6.pl2/src/ydpcon
 +																"These dictionares are not free - it is commercial software."));
      if (!tmp.isEmpty ()) dictionaryUrl->setText(tmp);
  }
+
+
+diff -urN kydpdict-0.5.6.pl2/src/ydpconfigure.cpp kydpdict-0.5.6.pl3/src/ydpconfigure.cpp
+--- kydpdict-0.5.6.pl2/src/ydpconfigure.cpp	Tue Sep 30 00:16:31 2003
++++ kydpdict-0.5.6.pl3/src/ydpconfigure.cpp	Wed Oct  1 01:51:27 2003
+@@ -18,7 +18,7 @@
+ ydpConfigure::ydpConfigure( kydpConfig *globalconfig, QWidget* parent,  const char* name, bool modal )
+     : QDialog( parent, name, modal )
+ {
+-    setFixedSize(400,260);
++    setFixedSize(600,260);
+     setCaption( tr("Configure Kydpdict") );
+ 
+     defaults = new QPushButton( this, "defaults" );
+@@ -34,7 +34,7 @@
+     ok->setGeometry(210,220,81,30);
+ 
+     TabWidget1 = new QTabWidget( this, "TabWidget1" );
+-    TabWidget1->setGeometry(10,10,381,200);
++    TabWidget1->setGeometry(10,10,581,200);
+ 
+     tab1 = new QWidget( TabWidget1, "tab1" );
+ 
+@@ -129,16 +129,16 @@
+ 
+     tab3 = new QWidget( TabWidget1, "tab3" );
+     checkBox2 = new QCheckBox(tr("Enable clipboard tracking"), tab3, "checkBox2");
+-    checkBox2->setGeometry(10,14,350,20);
++    checkBox2->setGeometry(10,14,550,20);
+     checkBox6 = new QCheckBox(tr("Ignore selection in dictionary window "
+ 								"when clipboard tracing is enabled."), tab3, "checkBox6");
+-    checkBox6->setGeometry(10,40,350,20);
++    checkBox6->setGeometry(10,40,550,20);
+     checkBox3 = new QCheckBox(tr("Enable italic font"), tab3, "checkBox3");
+-    checkBox3->setGeometry(10,66,350,20);
++    checkBox3->setGeometry(10,66,550,20);
+     checkBox4 = new QCheckBox(tr("Enable tooltips"), tab3, "checkBox4");
+-    checkBox4->setGeometry(10,92,350,20);
++    checkBox4->setGeometry(10,92,550,20);
+     checkBox5 = new QCheckBox(tr("Enable autoplay"), tab3, "checkBox5");
+-    checkBox5->setGeometry(10,118,350,20);
++    checkBox5->setGeometry(10,118,550,20);
+ 
+     TabWidget1->insertTab( tab3, tr("Miscellaneous") );
  
