@@ -2,7 +2,7 @@ Summary:	Frontend to Collins Dictionary
 Summary(pl):	Interfejs do s³ownika Collinsa
 Name:		kydpdict
 Version:	0.6.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	http://members.elysium.pl/ytm/src/%{name}-%{version}.tar.bz2
@@ -28,6 +28,8 @@ polsko-angielski, niemiecko-polski i polsko-niemiecki.
 %prep
 %setup -q
 
+%{__perl} -pi -e 's/-lqt3 -lqt2 -lqt -lqt-mt/-lqt-mt/' config/qt.m4
+
 %build
 %{__aclocal} --acdir=config
 %{__autoconf}
@@ -40,12 +42,12 @@ polsko-angielski, niemiecko-polski i polsko-niemiecki.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir} \
-	$RPM_BUILD_ROOT{%{_pixmapsdir},%{_applnkdir}/Scientific} \
+	$RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir}} \
 	$RPM_BUILD_ROOT%{_datadir}/kydpdict
 
 install src/kydpdict $RPM_BUILD_ROOT%{_bindir}
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Scientific
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 install src/kydpdict_pl.qm $RPM_BUILD_ROOT%{_datadir}/kydpdict
 install src/tips.html $RPM_BUILD_ROOT%{_datadir}/kydpdict
@@ -57,6 +59,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS README ChangeLog TODO
 %attr(755,root,root) %{_bindir}/*
-%{_applnkdir}/Scientific/*
-%{_pixmapsdir}/*
+%{_desktopdir}/*.desktop
+%{_pixmapsdir}/*.png
 %{_datadir}/kydpdict
