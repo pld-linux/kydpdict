@@ -1,18 +1,19 @@
 Summary:	Frontend to Collins Dictionary
 Summary(pl):	Interfejs do s³ownika Collinsa
 Name:		kydpdict
-Version:	0.6.3
+Version:	0.6.4
 Release:	1
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	http://members.elysium.pl/ytm/src/%{name}-%{version}.tar.bz2
-# Source0-md5:	d88660722285a5968d4f5d729a7596dc
+# Source0-md5:	b9c0e0ffb3c7baa2f89f3fe6b44c8773
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://members.elysium.pl/ytm/html/kydpdict.html
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	qt-devel >= 3.1.0
+BuildRequires:	qt-devel >= 3.3.2-5
+BuildRequires:	qt-linguist >= 3.3.2-5
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
