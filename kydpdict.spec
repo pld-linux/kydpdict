@@ -1,12 +1,12 @@
 Summary:	Frontend to Collins Dictionary
 Summary(pl):	Interfejs do s³ownika Collinsa
 Name:		kydpdict
-Version:	0.6.7
+Version:	0.9.0
 Release:	1
 License:	GPL
 Group:		Applications/Dictionaries
 Source0:	http://members.elysium.pl/ytm/src/%{name}-%{version}.tar.bz2
-# Source0-md5:	758b167b06a1605d742e697efe7555c0
+# Source0-md5:	8cc5b93c43d7d87f1051840354ef8088
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://members.elysium.pl/ytm/html/kydpdict.html
@@ -17,14 +17,17 @@ BuildRequires:	qt-linguist >= 3.3.2-5
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Kydpdict is a Qt frontend for Collins dictionaries released by Young
-Digital Poland. There are English-Polish, Polish-English,
-German-Polish and Polish-German dictionaries available.
+Kydpdict is a graphical (Qt) frontend for various free and commercial
+dictionaries available for Windows. Contrary to its name this software
+doesn't depend on KDE environment. Since version 0.9.0 it also isn't
+limited to YDP dictionaries, but can use others (like SAP).
 
 %description -l pl
-Kydpdict to interface do s³owników Collinsa wydanych przez Young
-Digital Poland. Dostêpne s± s³owniki: angielsko-polski,
-polsko-angielski, niemiecko-polski i polsko-niemiecki.
+Program Kydpdict jest graficzn± (Qt) nak³adk± pozwalaj±c± na ³atwe i
+efektywne korzystanie w ¶rodowisku graficznym z darmowego i
+komerycyjnych s³owników dostêpnych pod Windows. Wbrew swojej nazwie nie
+jest programem zale¿nym od ¶rodowiska KDE. Od wersji 0.9.0 równie¿ wbrew
+swojej nazwie nie jest li tylko nak³adk± na s³ownik YDP.
 
 %prep
 %setup -q
