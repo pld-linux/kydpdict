@@ -24,8 +24,8 @@ limited to YDP dictionaries, but can use others (like SAP).
 
 %description -l pl
 Program Kydpdict jest graficzn± (Qt) nak³adk± pozwalaj±c± na ³atwe i
-efektywne korzystanie w ¶rodowisku graficznym z darmowego i
-komerycyjnych s³owników dostêpnych pod Windows. Wbrew swojej nazwie nie
+efektywne korzystanie w ¶rodowisku graficznym z ró¿nych darmowych i
+komercyjnych s³owników dostêpnych pod Windows. Wbrew swojej nazwie nie
 jest programem zale¿nym od ¶rodowiska KDE. Od wersji 0.9.0 równie¿ wbrew
 swojej nazwie nie jest li tylko nak³adk± na s³ownik YDP.
 
