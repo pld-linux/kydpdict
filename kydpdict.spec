@@ -1,5 +1,5 @@
 Summary:	Frontend to Collins Dictionary
-Summary(pl):	Interfejs do s³ownika Collinsa
+Summary(pl.UTF-8):   Interfejs do sÅ‚ownika Collinsa
 Name:		kydpdict
 Version:	0.9.3
 Release:	1
@@ -22,12 +22,12 @@ dictionaries available for Windows. Contrary to its name this software
 doesn't depend on KDE environment. Since version 0.9.0 it also isn't
 limited to YDP dictionaries, but can use others (like SAP).
 
-%description -l pl
-Program Kydpdict jest graficzn± (Qt) nak³adk± pozwalaj±c± na ³atwe i
-efektywne korzystanie w ¶rodowisku graficznym z ró¿nych darmowych i
-komercyjnych s³owników dostêpnych pod Windows. Wbrew swojej nazwie nie
-jest programem zale¿nym od ¶rodowiska KDE. Od wersji 0.9.0 równie¿ wbrew
-swojej nazwie nie jest li tylko nak³adk± na s³ownik YDP.
+%description -l pl.UTF-8
+Program Kydpdict jest graficznÄ… (Qt) nakÅ‚adkÄ… pozwalajÄ…cÄ… na Å‚atwe i
+efektywne korzystanie w Å›rodowisku graficznym z rÃ³Å¼nych darmowych i
+komercyjnych sÅ‚ownikÃ³w dostÄ™pnych pod Windows. Wbrew swojej nazwie nie
+jest programem zaleÅ¼nym od Å›rodowiska KDE. Od wersji 0.9.0 rÃ³wnieÅ¼ wbrew
+swojej nazwie nie jest li tylko nakÅ‚adkÄ… na sÅ‚ownik YDP.
 
 %prep
 %setup -q
