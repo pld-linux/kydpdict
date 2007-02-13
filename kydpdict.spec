@@ -1,5 +1,5 @@
 Summary:	Frontend to Collins Dictionary
-Summary(pl.UTF-8):   Interfejs do słownika Collinsa
+Summary(pl.UTF-8):	Interfejs do słownika Collinsa
 Name:		kydpdict
 Version:	0.9.3
 Release:	1
