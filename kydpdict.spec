@@ -12,7 +12,7 @@ Source2:	%{name}.png
 URL:		http://members.elysium.pl/ytm/html/kydpdict.html
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	qt-devel >= 3.3.2-5
+BuildRequires:	qt-devel >= 6:3.3.2-5
 BuildRequires:	qt-linguist >= 3.3.2-5
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
